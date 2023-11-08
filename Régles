@@ -1,0 +1,14 @@
+Penser bien a avoir télécharger de quoi executer un programme python, ou sinon aller en ligne.
+Lorsque vous lancerer le programme, cela va vous demander une colonne et une ligne sur laquelle tirer.
+Pour information, la colonne 0 est ici 
+                                    ||
+                                    \/
+                                    0 0 0 0 0
+                                    0 0 0 0 0
+                                    0 0 0 0 0
+                                    0 0 0 0 0
+                                    0 0 0 0 0
+
+Et cela vaut de même pour la ligne 0
+
+Amusez vous bien !

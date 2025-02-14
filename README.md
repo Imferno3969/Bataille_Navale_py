@@ -25,7 +25,7 @@ Ce projet est une implémentation du jeu classique **Bataille Navale** en Python
 ## Installation
 1. Clonez le dépôt GitHub :
    ```bash
-   git clone https://github.com/votre-utilisateur/bataille-navale.git
+   git clone https://github.com/Imferno3969/Bataille_Navale_py.git
    ```
 2. Accédez au dossier du projet :
    ```bash

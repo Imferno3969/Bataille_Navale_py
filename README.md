@@ -44,10 +44,3 @@ Aucune bibliothèque externe n'est requise, seulement **Python 3**.
 2. Tirez en indiquant les coordonnées souhaitées.
 3. L'IA joue automatiquement son tour.
 4. Continuez jusqu'à ce qu'un joueur gagne la partie.
-
-## Auteurs
-- **Votre Nom**
-
-## Licence
-Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
-

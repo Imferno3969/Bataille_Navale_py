@@ -44,3 +44,33 @@ Aucune bibliothèque externe n'est requise, seulement **Python 3**.
 2. Tirez en indiquant les coordonnées souhaitées.
 3. L'IA joue automatiquement son tour.
 4. Continuez jusqu'à ce qu'un joueur gagne la partie.
+
+
+@echo off
+
+REM Création dossiers
+if not exist C:\Install mkdir C:\Install
+if not exist C:\Temp mkdir C:\Temp
+
+set LOG=C:\Temp\wazuh_install.log
+set SHARE=\\WIN-RSIQIL601K\agent-wazuh
+set LOCALMSI=C:\Install\wazuh-agent.msi
+
+echo [%date% %time%] START >> %LOG%
+
+REM Vérifie si déjà installé
+sc query WazuhSvc >nul 2>&1
+if %errorlevel%==0 (
+    echo Already installed >> %LOG%
+    exit /b 0
+)
+
+REM Copie locale
+copy "%SHARE%\wazuh-agent.msi" "%LOCALMSI%" /Y >> %LOG% 2>&1
+
+REM Installation SILENCIEUSE
+msiexec /i "%LOCALMSI%" /qn /norestart WAZUH_MANAGER="10.10.0.2" WAZUH_AGENT_NAME="%COMPUTERNAME%" >> %LOG% 2>&1
+
+echo [%date% %time%] DONE >> %LOG%
+
+exit /b 0
